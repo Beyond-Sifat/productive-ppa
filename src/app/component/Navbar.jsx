@@ -9,7 +9,7 @@ const Navbar = () => {
     const navLinks = ['Overview', 'Curriculum', 'Testimonial', 'Price'];
 
     const handleSectionClick = (section) => {
-        const sectionElement = window.document.getElementById(section.toLowerCase());
+        const sectionElement = document.getElementById(section.toLowerCase());
         if (sectionElement) {
             sectionElement.scrollIntoView({ behavior: "smooth" })
         }
@@ -44,7 +44,7 @@ const Navbar = () => {
                     {navLinks.map((link) => (
                         <li key={link}>
                             <button
-                                onClick={handleSectionClick(link)}
+                                onClick={() => handleSectionClick(link)}
                                 className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium">
                                 {link}
                             </button>
