@@ -104,8 +104,13 @@ const Navbar = () => {
                     </button>
 
                     {/* Enroll Button (Desktop only) */}
-                    <button className="hidden desktop:block bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">
-                        Enroll Now
+                    <button className="
+            rounded-lg bg-[#2466F2] px-6 py-2.5
+            text-sm font-semibold text-white
+            hover:bg-[#1a50cc] transition-colors duration-200
+            mobile:w-full tablet-sm:w-auto
+          ">
+                        Enroll now
                     </button>
 
                     {/* Hamburger (Mobile) */}
@@ -150,9 +155,9 @@ const Navbar = () => {
                         ))}
                     </ul>
 
-                    <button className="
+                     <button className="
             rounded-lg bg-[#2466F2] px-6 py-2.5
-            text-sm font-semibold  text-white
+            text-sm font-semibold text-white
             hover:bg-[#1a50cc] transition-colors duration-200
             mobile:w-full tablet-sm:w-auto
           ">

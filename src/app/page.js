@@ -1,4 +1,6 @@
+import Banner from "./component/Banner";
 import Navbar from "./component/Navbar";
+import PainPoints from "./component/PainPoints";
 import ResponsiveTest from "./responsive-test";
 
 export default function Home() {
@@ -6,6 +8,8 @@ export default function Home() {
     <main className="min-h-screen p-8">
       {/* <ResponsiveTest /> */}
       <Navbar></Navbar>
+      <Banner></Banner>
+      <PainPoints></PainPoints>
       {/* <h1 className="text-3xl font-bold mb-8 text-center">Tailwind v4 Custom Breakpoints Test</h1>
       
       <div className="space-y-4">
