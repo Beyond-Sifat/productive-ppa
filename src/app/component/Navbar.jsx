@@ -28,16 +28,27 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="bg-[#00000020] text-white px-4 py-3">
+        <nav className=" text-black dark:text-white px-4 py-3">
             <div className="max-w-7xl mx-auto flex items-center justify-between">
 
                 {/* LEFT: Logo */}
-                <div className="flex items-center space-x-2">
-                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 15.5H5.94173M30.699 15.5L15.3495 15.5M15.3495 0V6M15.3495 31V25M9.47549 1.17969L11.7493 6.72296M21.2235 29.82L18.9497 24.2767M1.16841 9.56836L6.65785 11.8645M29.5305 21.4315L24.0411 19.1354M1.1685 21.4316L6.65795 19.1355M29.5306 9.56846L24.0412 11.8646M9.47571 29.8203L11.7495 24.277M21.2237 1.18005L18.9499 6.72332M26.2032 4.54004L22.0018 8.78268M4.49575 26.4603L8.69719 22.2177M26.2032 26.46L22.0018 22.2173M4.49575 4.53965L8.69719 8.78229" stroke="white" strokeWidth="1.75" />
+                <div className="flex items-center space-x-2 dark:text-white text-black">
+                    <svg
+                        width="31"
+                        height="31"
+                        viewBox="0 0 31 31"
+                        fill="none"
+                        xmlns="[w3.org](http://www.w3.org/2000/svg)"
+                    >
+                        <path
+                            d="M0 15.5H5.94173M30.699 15.5L15.3495 15.5M15.3495 0V6M15.3495 31V25M9.47549 1.17969L11.7493 6.72296M21.2235 29.82L18.9497 24.2767M1.16841 9.56836L6.65785 11.8645M29.5305 21.4315L24.0411 19.1354M1.1685 21.4316L6.65795 19.1355M29.5306 9.56846L24.0412 11.8646M9.47571 29.8203L11.7495 24.277M21.2237 1.18005L18.9499 6.72332M26.2032 4.54004L22.0018 8.78268M4.49575 26.4603L8.69719 22.2177M26.2032 26.46L22.0018 22.2173M4.49575 4.53965L8.69719 8.78229"
+                            stroke="currentColor"
+                            strokeWidth="1.75"
+                        />
                     </svg>
-                    <span className="text-white font-bold text-lg">PPA</span>
+                    <span className="text-xl font-semibold tracking-wide">PPA</span>
                 </div>
+
 
                 {/* CENTER: Desktop Menu */}
                 <ul className="hidden desktop:flex items-center space-x-8">
@@ -45,7 +56,7 @@ const Navbar = () => {
                         <li key={link}>
                             <button
                                 onClick={() => handleSectionClick(link)}
-                                className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium">
+                                className="dark:text-gray-300 text-black hover:text-white transition-colors duration-200 text-sm font-medium">
                                 {link}
                             </button>
                         </li>
@@ -139,8 +150,13 @@ const Navbar = () => {
                         ))}
                     </ul>
 
-                    <button className="w-full bg-blue-600 hover:bg-blue-700 py-2 rounded-lg transition">
-                        Enroll Now
+                    <button className="
+            rounded-lg bg-[#2466F2] px-6 py-2.5
+            text-sm font-semibold  text-white
+            hover:bg-[#1a50cc] transition-colors duration-200
+            mobile:w-full tablet-sm:w-auto
+          ">
+                        Enroll now
                     </button>
                 </div>
             )}
