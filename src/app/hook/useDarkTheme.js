@@ -22,21 +22,31 @@
 import { useEffect, useState } from "react";
 
 export default function useDarkTheme() {
-    const [theme, setTheme] = useState("light");
+
+    const [theme, setTheme] = useState(() => {
+        // ✅ Runs only on client
+        if (typeof window !== "undefined") {
+            return localStorage.getItem("theme") || "light";
+        }
+        return "light";
+    });
 
     const themeToggle = () => {
         const newTheme = theme === "light" ? "dark" : "light";
         setTheme(newTheme);
-        localStorage.setItem("theme", newTheme);
     };
 
     useEffect(() => {
-        const storedTheme = localStorage.getItem("theme") || "light";
-        setTheme(storedTheme);
-    }, []);
+        const root = document.documentElement;
 
-    useEffect(() => {
-        document.documentElement.classList.toggle("dark", theme === "dark");
+        if (theme === "dark") {
+            root.classList.add("dark");
+        } else {
+            root.classList.remove("dark");
+        }
+
+        localStorage.setItem("theme", theme);
+
     }, [theme]);
 
     return { theme, themeToggle };
