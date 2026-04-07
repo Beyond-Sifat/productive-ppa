@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState, } from "react";
 import useDarkTheme from "../hook/useDarkTheme";
+import { Moon, Sun } from "lucide-react";
 
 const Navbar = () => {
     const { theme, themeToggle } = useDarkTheme();
@@ -55,7 +56,7 @@ const Navbar = () => {
                         <li key={link}>
                             <button
                                 onClick={() => handleSectionClick(link)}
-                                className="dark:text-gray-300 text-black hover:text-white transition-colors duration-200 text-sm font-medium">
+                                className="dark:text-gray-300 text-black hover:text-[#1a50cc] transition-colors duration-200 text-sm font-medium">
                                 {link}
                             </button>
                         </li>
@@ -71,33 +72,10 @@ const Navbar = () => {
                         className="p-2 hover:bg-white/10 rounded-lg transition duration-200"
                     >
                         {theme === "light" ? (
-                            // Moon Icon
-                            <svg
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="1.75"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            >
-                                <path d="M21 12.79A9 9 0 1 1 11.21 3c0 .67.07 1.32.21 1.95a7 7 0 0 0 8.58 8.58c.63.14 1.28.21 1.95.21z" />
-                            </svg>
+
+                            <Moon />
                         ) : (
-                            <svg
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="1.75"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                            >
-                                <circle cx="12" cy="12" r="5" />
-                                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-                            </svg>
+                            <Sun />
                         )}
                     </button>
 
@@ -142,7 +120,7 @@ const Navbar = () => {
                                         setIsMenuOpen(false);
                                         handleSectionClick(link);
                                     }}
-                                    className="dark:text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium text-black"
+                                    className="dark:text-gray-300 hover:text-[#1a50cc]transition-colors duration-200 text-sm font-medium text-black"
                                 >
                                     {link}
                                 </button>
@@ -150,7 +128,7 @@ const Navbar = () => {
                         ))}
                     </ul>
 
-                     <button className="
+                    <button className="
             rounded-lg bg-[#2466F2] px-6 py-2.5
             text-sm font-semibold text-white
             hover:bg-[#1a50cc] transition-colors duration-200
