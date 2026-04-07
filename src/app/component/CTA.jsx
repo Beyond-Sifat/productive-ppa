@@ -13,16 +13,16 @@ import { Card } from "@/components/ui/card";
 
 // ── Left side bullet points ───────────────────────────────────────────────────
 const features = [
-    "All of Video – Step-by-step deep work techniques",
-    "Live Video – Count applies to productivity...",
-    "Exclusive Community – Connect with others...",
+    "All of Video-Step-by-step deep work techniques",
+    "Live Video-Count applies to productivity...",
+    "Exclusive Community-Connect with others...",
 ];
 
 // ── Right side bullet points (what's included) ───────────────────────────────
 const includes = [
-    "All of Video – Step-by-step deep work techniques",
-    "Live Video – Count applies to productivity...",
-    "Exclusive Community – Connect with others...",
+    "All of Video-Step-by-step deep work techniques",
+    "Live Video-Count applies to productivity...",
+    "Exclusive Community-Connect with others...",
 ];
 
 export default function CTASection() {
