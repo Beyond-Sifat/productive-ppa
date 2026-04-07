@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 
 const testimonials = [
@@ -12,8 +11,8 @@ const testimonials = [
     id: 1,
     name: "Alex Carter",
     role: "Freelance Designer",
-    avatar: "/images/testimonial-1.jpg",   // 📌 small circular avatar
-    bgImage: null,                          // no full bg image
+    avatar: "/image/avater3.jpg",
+    bgImage: null,
     hasVideo: false,
     text: "As someone who juggles multiple projects, staying focused was always a challenge. This course gave me the tools to cut through distractions and work with absolute clarity. My productivity has never been better!",
   },
@@ -21,8 +20,8 @@ const testimonials = [
     id: 2,
     name: "Daniel Foster",
     role: "Content Creator",
-    avatar: "/images/testimonial-2-avatar.jpg", // 📌 small circular avatar
-    bgImage: "/images/testimonial-2.jpg",        // 📌 full card background image
+    avatar: "/image/1stprofile.png",
+    bgImage: "/image/1st.jpg",
     hasVideo: true,
     text: "",
   },
@@ -30,7 +29,7 @@ const testimonials = [
     id: 3,
     name: "Mark Davidson",
     role: "Software Developer",
-    avatar: "/images/testimonial-3.jpg",   // 📌 small circular avatar
+    avatar: "/image/avater2.jpg",
     bgImage: null,
     hasVideo: false,
     text: "I never realized how much distractions were holding me back. After applying the deep work techniques, I feel more in control of my time and energy. My efficiency has doubled!",
@@ -39,8 +38,8 @@ const testimonials = [
     id: 4,
     name: "Tom David",
     role: "Entrepreneur",
-    avatar: "/images/testimonial-4-avatar.jpg", // 📌 small circular avatar
-    bgImage: "/images/testimonial-4.jpg",        // 📌 full card background image
+    avatar: "/image/2ndprofile.jpg",
+    bgImage: "/image/2nd.jpg",
     hasVideo: true,
     text: "",
   },
@@ -48,7 +47,7 @@ const testimonials = [
     id: 5,
     name: "James Okafor",
     role: "Entrepreneur",
-    avatar: "/images/testimonial-5.jpg",   // 📌 small circular avatar
+    avatar: "/image/trained2.jpg",
     bgImage: null,
     hasVideo: false,
     text: "Procrastination was holding me until now. This course gave me consistent, actionable steps that skyrocketed my output.",
@@ -152,10 +151,9 @@ export default function Testimonials() {
                       fill
                       className="object-cover object-center"
                     />
-                    {/* Dark overlay */}
+
                     <div className="absolute inset-0 bg-black/40" />
 
-                    {/* Play button center */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <button
                         aria-label={`Play ${t.name}'s video`}
@@ -165,9 +163,8 @@ export default function Testimonials() {
                       </button>
                     </div>
 
-                    {/* Bottom: small avatar + name + role */}
-                    <div className="absolute bottom-0 left-0 right-0 px-4 py-4 flex items-center gap-3">
-                      <div className="relative w-8 h-8 rounded-full overflow-hidden border-2 border-white/40 shrink-0">
+                    <div className="absolute top-4 left-4">
+                      <div className="relative w-10 h-10 rounded-full overflow-hidden border border-gray-200 dark:border-white/10">
                         <Image
                           src={t.avatar}
                           alt={t.name}
@@ -175,14 +172,15 @@ export default function Testimonials() {
                           className="object-cover"
                         />
                       </div>
-                      <div>
-                        <p className="text-sm font-semibold text-white leading-tight">
-                          {t.name}
-                        </p>
-                        <p className="text-xs text-white/70 mt-0.5">
-                          {t.role}
-                        </p>
-                      </div>
+                    </div>
+
+                    <div className="absolute bottom-4 left-4">
+                      <p className="text-sm font-semibold text-white">
+                        {t.name}
+                      </p>
+                      <p className="text-xs text-white/80 mt-0.5">
+                        {t.role}
+                      </p>
                     </div>
                   </div>
 
@@ -208,7 +206,7 @@ export default function Testimonials() {
                     </div>
 
                     {/* Bottom: name + role */}
-                    <div className="mt-6 pt-4 border-t border-gray-100 dark:border-white/10">
+                    <div className="mt-6 pt-4 ">
                       <p className="text-sm font-semibold text-black dark:text-white">
                         {t.name}
                       </p>
@@ -231,11 +229,10 @@ export default function Testimonials() {
               key={i}
               onClick={() => setCurrent(i)}
               aria-label={`Slide ${i + 1}`}
-              className={`rounded-full transition-all duration-300 ${
-                current === i
-                  ? "w-5 h-1.5 bg-[#2466F2]"
-                  : "w-1.5 h-1.5 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
-              }`}
+              className={`rounded-full transition-all duration-300 ${current === i
+                ? "w-5 h-1.5 bg-[#2466F2]"
+                : "w-1.5 h-1.5 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
+                }`}
             />
           ))}
         </div>
