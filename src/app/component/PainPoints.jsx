@@ -1,30 +1,21 @@
 import Image from "next/image";
 
-// ─── Pain Point Cards Data ────────────────────────────────────────────────────
 const painPoints = [
     {
         id: 1,
-        image: "/image/1stpain.jpg",       // ← 📌 Card 1 image
+        image: "/image/1stpain.jpg",
         alt: "Person struggling to focus",
-        // title: "Constant Distractions",
-        // description:
-        //     "Notifications, social media, and mental noise break your flow state before it even begins.",
+
     },
     {
         id: 2,
-        image: "/image/2ndpain.jpg",       // ← 📌 Card 2 image
+        image: "/image/2ndpain.jpg",
         alt: "Person feeling overwhelmed",
-        // title: "Endless Task Overload",
-        // description:
-        //     "Your to-do list grows faster than you can check things off, leaving you feeling stuck and behind.",
     },
     {
         id: 3,
-        image: "/image/3rdpain.jpg",       // ← 📌 Card 3 image
+        image: "/image/3rdpain.jpg",
         alt: "Person procrastinating",
-        // title: "Procrastination Loops",
-        // description:
-        //     "You delay the hard things and stay busy with low-impact tasks that don't move the needle.",
     },
 ];
 const painPoints2 = [
@@ -50,9 +41,9 @@ const painPoints2 = [
 
 // ─── Student Avatars (social proof) ──────────────────────────────────────────
 const studentAvatars = [
-    { id: 1, src: "/image/avater1.jpg", alt: "Student 1" },   // ← 📌
-    { id: 2, src: "/image/avater2.jpg", alt: "Student 2" },   // ← 📌
-    { id: 3, src: "/image/avater3.jpg", alt: "Student 3" },   // ← 📌
+    { id: 1, src: "/image/avater1.jpg", alt: "Student 1" },
+    { id: 2, src: "/image/avater2.jpg", alt: "Student 2" },
+    { id: 3, src: "/image/avater3.jpg", alt: "Student 3" },
 ];
 
 export default function PainPoints() {
