@@ -3,6 +3,7 @@ import Benefits from "./component/Benefits";
 import Curriculum from "./component/Curriculam";
 import Navbar from "./component/Navbar";
 import PainPoints from "./component/PainPoints";
+import Testimonials from "./component/Testimonial";
 import ResponsiveTest from "./responsive-test";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <PainPoints></PainPoints> 
       <Benefits></Benefits>
       <Curriculum></Curriculum>
+      <Testimonials></Testimonials>
       
       {/* <h1 className="text-3xl font-bold mb-8 text-center">Tailwind v4 Custom Breakpoints Test</h1>
       
