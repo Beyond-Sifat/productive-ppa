@@ -9,7 +9,7 @@ export default function Home() {
       {/* <ResponsiveTest /> */}
       <Navbar></Navbar>
       <Banner></Banner>
-      <PainPoints></PainPoints>
+      <PainPoints></PainPoints> 
       {/* <h1 className="text-3xl font-bold mb-8 text-center">Tailwind v4 Custom Breakpoints Test</h1>
       
       <div className="space-y-4">
