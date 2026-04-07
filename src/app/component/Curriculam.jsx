@@ -1,13 +1,6 @@
-// components/Curriculum.jsx
-//
-// 📁 ASSETS REQUIRED:
-//   /public/images/curriculum-preview.jpg  ← Course preview image shown in right card
-//   (The dark thumbnail/video preview image visible in the right card top area)
-
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 // ── Module Data ───────────────────────────────────────────────────────────────
 const modules = [
@@ -46,14 +39,13 @@ const modules = [
   },
 ];
 
-// ── Right Card Bullet Points ──────────────────────────────────────────────────
 const cardFeatures = [
   "Principles & Strategies – Core deep work techniques",
   "Live Sessions – Apply skills in real-time",
   "Exclusive Community – Connect with others",
 ];
 
-// ─────────────────────────────────────────────────────────────────────────────
+
 
 export default function Curriculum() {
   const [openModule, setOpenModule] = useState(1);
@@ -64,14 +56,14 @@ export default function Curriculum() {
     <section className="w-full bg-white dark:bg-[#0A0A0A] py-16 tablet:py-20 desktop:py-24">
       <div className="max-w-7xl mx-auto px-5 mobile:px-5 tablet-sm:px-8 tablet:px-12 desktop:px-16">
 
-        {/* ── Badge ── */}
+  
         <div className="flex justify-center">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-[#2466F2]/40 bg-[#2466F2]/10 px-3 py-1 text-xs font-medium text-[#2466F2]">
             Course Curriculum
           </span>
         </div>
 
-        {/* ── Heading ── */}
+
         <h2 className="
           mt-5 text-center font-bold leading-tight tracking-tight
           text-[1.6rem] mobile:text-[1.6rem] tablet-sm:text-[2rem] tablet:text-[2.3rem] desktop:text-[2.6rem]
@@ -81,16 +73,13 @@ export default function Curriculum() {
           Mastering Deep Work: A Structured Path to Peak Productivity
         </h2>
 
-        {/* ── Two Column Layout ── */}
         <div className="
           mt-12 flex gap-6
           mobile:flex-col
           desktop:flex-row desktop:items-start
         ">
 
-          {/* ════════════════════════════════════════
-              LEFT — Accordion Module List
-          ════════════════════════════════════════ */}
+    
           <div className="flex-1 flex flex-col gap-3">
             {modules.map((mod) => {
               const isOpen = openModule === mod.id;
@@ -99,13 +88,13 @@ export default function Curriculum() {
                   key={mod.id}
                   className="rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#111] overflow-hidden"
                 >
-                  {/* ── Accordion Header ── */}
+              
                   <button
                     onClick={() => toggle(mod.id)}
                     className="w-full flex items-center justify-between px-5 py-4 text-left group"
                   >
                     <div className="flex items-center gap-3">
-                      {/* Expand indicator dot */}
+                 
                       <span className={`w-2 h-2 rounded-full shrink-0 transition-colors duration-200 ${isOpen ? "bg-[#2466F2]" : "bg-gray-400 dark:bg-gray-600"}`} />
                       <div>
                         <p className="text-sm font-semibold text-black dark:text-white leading-snug">
@@ -117,7 +106,7 @@ export default function Curriculum() {
                       </div>
                     </div>
 
-                    {/* Chevron */}
+                    
                     <svg
                       width="18" height="18" viewBox="0 0 18 18" fill="none"
                       className={`shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`}
@@ -128,7 +117,7 @@ export default function Curriculum() {
                     </svg>
                   </button>
 
-                  {/* ── Accordion Body ── */}
+                
                   {isOpen && mod.lessons.length > 0 && (
                     <div className="border-t border-gray-100 dark:border-white/5 divide-y divide-gray-100 dark:divide-white/5">
                       {mod.lessons.map((lesson, i) => (
@@ -137,7 +126,7 @@ export default function Curriculum() {
                           className="flex items-center justify-between px-5 py-3 gap-4"
                         >
                           <div className="flex items-center gap-3 min-w-0">
-                            {/* Play circle icon */}
+                           
                             <div className="shrink-0 w-7 h-7 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center bg-gray-50 dark:bg-white/5">
                               <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                                 <path d="M3 2l5 3-5 3V2z" fill="#2466F2" />
@@ -166,44 +155,14 @@ export default function Curriculum() {
               );
             })}
           </div>
-
-          {/* ════════════════════════════════════════
-              RIGHT — Preview Card
-              Sticky on desktop so it stays in view
-              while user scrolls the accordion
-          ════════════════════════════════════════ */}
           <div className="
             desktop:w-[340px] desktop:shrink-0 desktop:sticky desktop:top-24
           ">
             <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#111] overflow-hidden">
 
-              {/* ── Preview Image ── */}
-              <div className="relative w-full aspect-video bg-gray-100 dark:bg-[#1a1a1a]">
-                {/*
-                  📌 ADD YOUR IMAGE:
-                  src="/images/curriculum-preview.jpg"
-                  ← Course preview / thumbnail image
-                */}
-                <Image
-                  src="/images/curriculum-preview.jpg"
-                  alt="Course preview"
-                  fill
-                  className="object-cover"
-                />
-
-                {/* Play button overlay */}
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                  <div className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                      <path d="M5 3.5l10 5.5-10 5.5V3.5z" fill="#2466F2" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
               {/* ── Card Body ── */}
-              <div className="p-5">
-                <p className="text-xs font-medium text-[#2466F2] uppercase tracking-wide">
+              <div className="p-5 mx-5">
+                <p className="text-lg font-medium text-black dark:text-white uppercase tracking-wide my-10">
                   Not only video lessons!
                 </p>
 
