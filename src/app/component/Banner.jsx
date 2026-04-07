@@ -4,7 +4,7 @@ export default function Banner() {
     return (
         <section className="max-w-7xl mx-auto relative w-full overflow-hidden">
             <div
-                className="pointer-events-none absolute inset-0 z-0"
+                className="pointer-events-none absolute inset-0 z-0 bg-gradient-to-t from-[#2466F2] to-transparent"
                 aria-hidden="true"
                 style={{
                     maskImage: "linear-gradient(to top, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 100%)",
