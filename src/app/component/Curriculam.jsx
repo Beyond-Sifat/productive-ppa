@@ -53,7 +53,7 @@ export default function Curriculum() {
   const toggle = (id) => setOpenModule(openModule === id ? null : id);
 
   return (
-    <section className="w-full bg-white dark:bg-[#0A0A0A] py-16 tablet:py-20 desktop:py-24">
+    <section id="curriculum" className="w-full bg-white dark:bg-[#0A0A0A] py-16 tablet:py-20 desktop:py-24">
       <div className="max-w-7xl mx-auto px-5 mobile:px-5 tablet-sm:px-8 tablet:px-12 desktop:px-16">
 
   

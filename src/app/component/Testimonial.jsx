@@ -67,7 +67,7 @@ export default function Testimonials() {
   const next = () => setCurrent((c) => Math.min(c + 1, maxIndex));
 
   return (
-    <section className="w-full bg-white dark:bg-[#0A0A0A] py-16 tablet:py-20 desktop:py-24 overflow-hidden">
+    <section id="testimonial" className="w-full bg-white dark:bg-[#0A0A0A] py-16 tablet:py-20 desktop:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 mobile:px-5 tablet-sm:px-8 tablet:px-12 desktop:px-16">
 
         {/* ── Badge ── */}
