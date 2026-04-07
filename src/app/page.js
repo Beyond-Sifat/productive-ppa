@@ -1,5 +1,6 @@
 import Banner from "./component/Banner";
 import Benefits from "./component/Benefits";
+import CTASection from "./component/CTA";
 import Curriculum from "./component/Curriculam";
 import Navbar from "./component/Navbar";
 import PainPoints from "./component/PainPoints";
@@ -16,6 +17,7 @@ export default function Home() {
       <Benefits></Benefits>
       <Curriculum></Curriculum>
       <Testimonials></Testimonials>
+      <CTASection></CTASection>
       
       {/* <h1 className="text-3xl font-bold mb-8 text-center">Tailwind v4 Custom Breakpoints Test</h1>
       
