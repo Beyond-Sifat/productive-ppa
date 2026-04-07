@@ -7,47 +7,51 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 
-// ── Data ──────────────────────────────────────────────────────────────────────
 const testimonials = [
   {
     id: 1,
     name: "Alex Carter",
-    role: "Entrepreneur",
-    image: "/images/testimonial-1.jpg",
+    role: "Freelance Designer",
+    avatar: "/images/testimonial-1.jpg",   // 📌 small circular avatar
+    bgImage: null,                          // no full bg image
     hasVideo: false,
-    text: "Before this course, I was always distracted and procrastinating. Now I can sit down and actually get deep work done. My productivity has tripled and I don't feel exhausted at the end of the day anymore.",
+    text: "As someone who juggles multiple projects, staying focused was always a challenge. This course gave me the tools to cut through distractions and work with absolute clarity. My productivity has never been better!",
   },
   {
     id: 2,
     name: "Daniel Foster",
-    role: "Software Engineer",
-    image: "/image/1st.jpg",
+    role: "Content Creator",
+    avatar: "/images/testimonial-2-avatar.jpg", // 📌 small circular avatar
+    bgImage: "/images/testimonial-2.jpg",        // 📌 full card background image
     hasVideo: true,
-    text: "I never believed how much time I was wasting until I took this course. The deep work techniques helped me ship features faster and actually enjoy my work again.",
+    text: "",
   },
   {
     id: 3,
     name: "Mark Davidson",
-    role: "Content Creator",
-    image: "/image/1st.jpg",
+    role: "Software Developer",
+    avatar: "/images/testimonial-3.jpg",   // 📌 small circular avatar
+    bgImage: null,
     hasVideo: false,
-    text: "This course completely changed how I approach my creative work. I used to spend hours staring at a blank screen. Now I have a system that actually works every single time.",
+    text: "I never realized how much distractions were holding me back. After applying the deep work techniques, I feel more in control of my time and energy. My efficiency has doubled!",
   },
   {
     id: 4,
-    name: "Sara Lin",
-    role: "Product Manager",
-    image: "/image/2nd.jpg",
+    name: "Tom David",
+    role: "Entrepreneur",
+    avatar: "/images/testimonial-4-avatar.jpg", // 📌 small circular avatar
+    bgImage: "/images/testimonial-4.jpg",        // 📌 full card background image
     hasVideo: true,
-    text: "The procrastination module alone was worth the price. I've recommended this to my entire team. The habit-building frameworks are practical and stick with you long term.",
+    text: "",
   },
   {
     id: 5,
     name: "James Okafor",
-    role: "Freelance Designer",
-    image: "/images/testimonial-5.jpg",
+    role: "Entrepreneur",
+    avatar: "/images/testimonial-5.jpg",   // 📌 small circular avatar
+    bgImage: null,
     hasVideo: false,
-    text: "I was skeptical at first but the results speak for themselves. My client turnaround time dropped by 40% and I finally have time for personal projects without burning out.",
+    text: "Procrastination was holding me until now. This course gave me consistent, actionable steps that skyrocketed my output.",
   },
 ];
 
@@ -73,6 +77,7 @@ export default function Testimonials() {
             variant="outline"
             className="rounded-full border-[#2466F2]/40 bg-[#2466F2]/10 text-[#2466F2] hover:bg-[#2466F2]/10 px-3 py-1 text-xs font-medium"
           >
+            <span className="w-1.5 h-1.5 rounded-full bg-[#2466F2] mr-1.5 inline-block" />
             Testimonials
           </Badge>
         </div>
@@ -84,21 +89,16 @@ export default function Testimonials() {
           text-black dark:text-white
         ">
           Real Results from{" "}
-          <br className="mobile:block tablet:hidden" />
+          <br />
           Real People
         </h2>
 
         {/* ── Subtitle + Nav Row ── */}
-        <div className="
-          mt-6 flex items-center
-          mobile:flex-col mobile:gap-4
-          tablet:flex-row tablet:justify-between
-        ">
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+        <div className="mt-10 flex items-center mobile:flex-col mobile:gap-4 tablet:flex-row tablet:justify-between">
+          <p className="text-sm font-medium text-black dark:text-white">
             Join with 5K other students
           </p>
 
-          {/* Prev / Next — shadcn Button variant="outline" */}
           <div className="flex items-center gap-2">
             <Button
               variant="outline"
@@ -106,16 +106,7 @@ export default function Testimonials() {
               onClick={prev}
               disabled={isPrevDisabled}
               aria-label="Previous"
-              className="
-                w-8 h-8 rounded-full
-                border-gray-300 dark:border-white/20
-                text-black dark:text-white
-                bg-transparent
-                hover:border-[#2466F2] hover:text-[#2466F2] hover:bg-transparent
-                dark:hover:border-[#2466F2] dark:hover:text-[#2466F2] dark:hover:bg-transparent
-                disabled:opacity-30 disabled:cursor-not-allowed
-                transition-all duration-200
-              "
+              className="w-9 h-9 rounded-full border-gray-300 dark:border-white/20 text-black dark:text-white bg-transparent hover:border-[#2466F2] hover:text-[#2466F2] hover:bg-transparent dark:hover:border-[#2466F2] dark:hover:text-[#2466F2] dark:hover:bg-transparent disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200"
             >
               <ChevronLeft className="w-4 h-4" />
             </Button>
@@ -126,16 +117,7 @@ export default function Testimonials() {
               onClick={next}
               disabled={isNextDisabled}
               aria-label="Next"
-              className="
-                w-8 h-8 rounded-full
-                border-gray-300 dark:border-white/20
-                text-black dark:text-white
-                bg-transparent
-                hover:border-[#2466F2] hover:text-[#2466F2] hover:bg-transparent
-                dark:hover:border-[#2466F2] dark:hover:text-[#2466F2] dark:hover:bg-transparent
-                disabled:opacity-30 disabled:cursor-not-allowed
-                transition-all duration-200
-              "
+              className="w-9 h-9 rounded-full border-gray-300 dark:border-white/20 text-black dark:text-white bg-transparent hover:border-[#2466F2] hover:text-[#2466F2] hover:bg-transparent dark:hover:border-[#2466F2] dark:hover:text-[#2466F2] dark:hover:bg-transparent disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200"
             >
               <ChevronRight className="w-4 h-4" />
             </Button>
@@ -143,7 +125,7 @@ export default function Testimonials() {
         </div>
 
         {/* ── Slider Track ── */}
-        <div className="mt-8 overflow-hidden">
+        <div className="mt-5 overflow-hidden">
           <div
             className="flex gap-4 transition-transform duration-500 ease-in-out"
             style={{
@@ -151,66 +133,93 @@ export default function Testimonials() {
             }}
           >
             {testimonials.map((t) => (
-              <Card
+              <div
                 key={t.id}
                 className="
-                  shrink-0 p-0 gap-0
-                  w-full
-                  mobile:w-full
-                  tablet-sm:w-[calc(50%-0.5rem)]
-                  desktop:w-[calc(33.333%-0.667rem)]
-                  rounded-2xl overflow-hidden
+                  shrink-0
+                  w-full mobile:w-full tablet-sm:w-[calc(50%-0.5rem)] desktop:w-[calc(33.333%-0.667rem)]
+                  rounded-2xl overflow-hidden relative
                   border border-gray-200 dark:border-white/10
-                  bg-white dark:bg-[#111]
-                  shadow-none
+                  min-h-[280px]
                 "
               >
-                {/* ── Image area ── */}
-                <div className="relative w-full aspect-[4/3] bg-gray-100 dark:bg-[#1a1a1a]">
-                  <Image
-                    src={t.image}
-                    alt={t.name}
-                    fill
-                    className="object-cover object-center"
-                  />
+                {/* ── CARD TYPE A: Full background image (video cards) ── */}
+                {t.bgImage ? (
+                  <div className="relative w-full h-full min-h-[280px]">
+                    <Image
+                      src={t.bgImage}
+                      alt={t.name}
+                      fill
+                      className="object-cover object-center"
+                    />
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 bg-black/40" />
 
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
-
-                  {/* Play button */}
-                  {t.hasVideo && (
-                    <button
-                      aria-label={`Play ${t.name}'s video`}
-                      className="absolute inset-0 flex items-center justify-center group"
-                    >
-                      <span className="
-                        w-12 h-12 rounded-full bg-white/90
-                        flex items-center justify-center shadow-lg
-                        group-hover:scale-110 transition-transform duration-200
-                      ">
+                    {/* Play button center */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <button
+                        aria-label={`Play ${t.name}'s video`}
+                        className="w-12 h-12 rounded-full bg-white/90 flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-200"
+                      >
                         <Play className="w-4 h-4 fill-[#2466F2] text-[#2466F2] ml-0.5" />
-                      </span>
-                    </button>
-                  )}
+                      </button>
+                    </div>
 
-                  {/* Name + role overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 px-4 py-3">
-                    <p className="text-sm font-semibold text-white leading-tight">
-                      {t.name}
-                    </p>
-                    <p className="text-xs text-white/70 mt-0.5">
-                      {t.role}
-                    </p>
+                    {/* Bottom: small avatar + name + role */}
+                    <div className="absolute bottom-0 left-0 right-0 px-4 py-4 flex items-center gap-3">
+                      <div className="relative w-8 h-8 rounded-full overflow-hidden border-2 border-white/40 shrink-0">
+                        <Image
+                          src={t.avatar}
+                          alt={t.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-white leading-tight">
+                          {t.name}
+                        </p>
+                        <p className="text-xs text-white/70 mt-0.5">
+                          {t.role}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
 
-                {/* ── Text ── */}
-                <CardContent className="px-4 py-4">
-                  <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
-                    &ldquo;{t.text}&rdquo;
-                  </p>
-                </CardContent>
-              </Card>
+                ) : (
+                  /* ── CARD TYPE B: Dark card with avatar + text + name ── */
+                  <div className="bg-white dark:bg-[#111] h-full min-h-[280px] p-5 flex flex-col justify-between">
+
+                    {/* Top: small circular avatar */}
+                    <div>
+                      <div className="relative w-10 h-10 rounded-full overflow-hidden border border-gray-200 dark:border-white/10 shrink-0">
+                        <Image
+                          src={t.avatar}
+                          alt={t.name}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+
+                      {/* Testimonial text */}
+                      <p className="mt-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+                        {t.text}
+                      </p>
+                    </div>
+
+                    {/* Bottom: name + role */}
+                    <div className="mt-6 pt-4 border-t border-gray-100 dark:border-white/10">
+                      <p className="text-sm font-semibold text-black dark:text-white">
+                        {t.name}
+                      </p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                        {t.role}
+                      </p>
+                    </div>
+
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         </div>
@@ -222,13 +231,11 @@ export default function Testimonials() {
               key={i}
               onClick={() => setCurrent(i)}
               aria-label={`Slide ${i + 1}`}
-              className={`
-                rounded-full transition-all duration-300
-                ${current === i
+              className={`rounded-full transition-all duration-300 ${
+                current === i
                   ? "w-5 h-1.5 bg-[#2466F2]"
                   : "w-1.5 h-1.5 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
-                }
-              `}
+              }`}
             />
           ))}
         </div>

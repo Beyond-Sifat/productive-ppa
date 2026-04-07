@@ -9,9 +9,9 @@ const footerLinks = [
 ];
 
 const avatars = [
-    { id: 1, image: "/image/footer1.jpg", alt: "Student 1" }, // 📌
-    { id: 2, image: "/image/footer2.jpg", alt: "Student 2" }, // 📌
-    { id: 3, image: "/image/footer3.jpg", alt: "Student 3" }, // 📌
+    { id: 1, image: "/image/avater3.jpg", alt: "Student 1" }, // 📌
+    { id: 2, image: "/image/avater2.jpg", alt: "Student 2" }, // 📌
+    { id: 3, image: "/image/avater1.jpg", alt: "Student 3" }, // 📌
 ];
 
 export default function Footer() {
