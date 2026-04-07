@@ -20,18 +20,18 @@ export default function CTASection() {
         <section id="price" className="w-full bg-white dark:bg-[#0A0A0A] py-16 tablet:py-20 desktop:py-24">
             <div className="max-w-7xl mx-auto px-5 mobile:px-5 tablet-sm:px-8 tablet:px-12 desktop:px-16">
 
-                <Card className="rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10  bg-gray-50 dark:bg-[#111] shadow-none p-0
+                <Card className="rounded-2xl overflow-hidden   bg-gray-50 dark:bg-[#111] shadow-none p-0
         ">
                     <div className="flex mobile:flex-col desktop:flex-row">
 
-                        <div className="flex-1 p-7 mobile:p-5 tablet-sm:p-6 tablet:p-8 desktop:p-10 border-b border-gray-200 dark:border-white/10 desktop:border-b-0            desktop:border-r">
+                        <div className="flex-1 p-7 mobile:p-5 tablet-sm:p-6 tablet:p-8 desktop:p-10 ">
 
                             {/* Badge */}
                             <Badge
                                 variant="outline"
                                 className="
                   rounded-full
-                  border-[#2466F2]/40 bg-[#2466F2]/10
+                 bg-[#2466F2]/10
                   text-[#2466F2] text-xs font-medium
                   px-3 py-1
                   hover:bg-[#2466F2]/10
@@ -63,7 +63,7 @@ export default function CTASection() {
                                         <span className="
                       mt-0.5 shrink-0
                       w-4 h-4 rounded-full
-                      bg-[#2466F2]/10 border border-[#2466F2]/30
+                      bg-[#2466F2]/10
                       flex items-center justify-center
                     ">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +108,7 @@ export default function CTASection() {
                   rounded-full px-2.5 py-0.5
                   text-xs font-semibold
                    bg-[#2466F2] text-white
-                  border border-emerald-500/25
+                 
                 ">
                                     30% off
                                 </span>
@@ -123,7 +123,7 @@ export default function CTASection() {
                             <ul className="mt-6 flex flex-col gap-3">
                                 {includes.map((item, i) => (
                                     <li key={i} className="flex items-start gap-3">
-                                        <span className="mt-0.5 shrink-0 w-4 h-4 rounded-full bg-[#2466F2]/10 border border-[#2466F2]/30 flex items-center justify-center">
+                                        <span className="mt-0.5 shrink-0 w-4 h-4 rounded-full bg-[#2466F2]/10 flex items-center justify-center">
 
 
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
