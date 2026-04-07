@@ -1,9 +1,4 @@
-// components/Benefits.jsx
-//
-// 📁 ASSETS REQUIRED:
-//   Icons for each timeline item (optional — using SVG inline below)
-//   No images needed for this section unless you want custom icons.
-
+"use client";
 export default function Benefits() {
     const benefits = [
         {
@@ -57,12 +52,10 @@ export default function Benefits() {
         <section id="overview" className="w-full bg-white dark:bg-[#0A0A0A] py-16 tablet:py-20 desktop:py-24">
             <div className="max-w-7xl mx-auto px-5 mobile:px-5 tablet-sm:px-8 tablet:px-12 desktop:px-16 flex flex-col items-center">
 
-                {/* ── Badge ── */}
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-[#2466F2]/40 bg-[#2466F2]/10 px-3 py-1 text-xs font-medium text-[#2466F2]">
                     The Deep Focus Blueprint
                 </span>
 
-                {/* ── Heading ── */}
                 <h2 className="
           mt-5 text-center font-bold leading-tight tracking-tight
           text-[1.6rem] mobile:text-[1.6rem] tablet-sm:text-[2rem] tablet:text-[2.4rem] desktop:text-[2.8rem]
@@ -72,18 +65,14 @@ export default function Benefits() {
                     A self-paced, results-driven course designed to help you
                 </h2>
 
-                {/* ── Timeline ── */}
                 <div className="mt-14 flex flex-col items-center w-full max-w-lg">
                     {benefits.map((item, index) => (
                         <div key={item.id} className="flex gap-6 w-full">
 
-                            {/* ── Left: Line + Dot ── */}
                             <div className="flex flex-col items-center">
-                                {/* Dot */}
                                 <div className="flex items-center justify-center w-9 h-9 rounded-full bg-[#2466F2]/10 border border-[#2466F2]/30 shrink-0 z-10">
                                     {item.icon}
                                 </div>
-                                {/* Vertical line (skip for last item) */}
                                 {index < benefits.length - 1 && (
                                     <div className="w-px flex-1 mt-1 mb-1 bg-gradient-to-b from-[#2466F2]/40 to-[#2466F2]/05 min-h-[48px]" />
                                 )}

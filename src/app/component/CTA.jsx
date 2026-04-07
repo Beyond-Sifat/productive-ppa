@@ -1,24 +1,14 @@
-// components/CTASection.jsx
-//
-// 📦 SHADCN COMPONENTS NEEDED:
-//   npx shadcn@latest add button
-//   npx shadcn@latest add badge
-//   npx shadcn@latest add card
-//
-// No images needed for this section.
-
+"use client";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 
-// ── Left side bullet points ───────────────────────────────────────────────────
 const features = [
     "All of Video-Step-by-step deep work techniques",
     "Live Video-Count applies to productivity...",
     "Exclusive Community-Connect with others...",
 ];
 
-// ── Right side bullet points (what's included) ───────────────────────────────
 const includes = [
     "All of Video-Step-by-step deep work techniques",
     "Live Video-Count applies to productivity...",
@@ -31,27 +21,11 @@ export default function CTASection() {
             <div className="max-w-7xl mx-auto px-5 mobile:px-5 tablet-sm:px-8 tablet:px-12 desktop:px-16">
 
                 {/* ── Outer Card ── */}
-                <Card className="
-          rounded-2xl overflow-hidden
-          border border-gray-200 dark:border-white/10
-          bg-gray-50 dark:bg-[#111]
-          shadow-none p-0
+                <Card className="rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10  bg-gray-50 dark:bg-[#111] shadow-none p-0
         ">
-                    <div className="
-            flex
-            mobile:flex-col
-            desktop:flex-row
-          ">
+                    <div className="flex mobile:flex-col desktop:flex-row">
 
-                        {/* ════════════════════════════════════
-                LEFT COLUMN
-            ════════════════════════════════════ */}
-                        <div className="
-              flex-1
-              p-7 mobile:p-5 tablet-sm:p-6 tablet:p-8 desktop:p-10
-              border-b border-gray-200 dark:border-white/10
-              desktop:border-b-0 desktop:border-r
-            ">
+                        <div className="flex-1 p-7 mobile:p-5 tablet-sm:p-6 tablet:p-8 desktop:p-10 border-b border-gray-200 dark:border-white/10 desktop:border-b-0            desktop:border-r">
 
                             {/* Badge */}
                             <Badge

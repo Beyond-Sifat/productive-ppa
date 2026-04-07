@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-// ── Module Data ───────────────────────────────────────────────────────────────
 const modules = [
   {
     id: 1,
@@ -11,8 +10,8 @@ const modules = [
     expanded: true,
     lessons: [
       { title: "Understanding Focus & Distraction", tag: "Preview", duration: "18:05" },
-      { title: "The Science Behind Deep Work",      tag: null,      duration: "22:10" },
-      { title: "Shifting Your Productive As Habits",tag: null,      duration: "19:43" },
+      { title: "The Science Behind Deep Work", tag: null, duration: "22:10" },
+      { title: "Shifting Your Productive As Habits", tag: null, duration: "19:43" },
       { title: "How to Strengthen Your Attentive Style", tag: null, duration: "21:33" },
     ],
   },
@@ -56,7 +55,7 @@ export default function Curriculum() {
     <section id="curriculum" className="w-full bg-white dark:bg-[#0A0A0A] py-16 tablet:py-20 desktop:py-24">
       <div className="max-w-7xl mx-auto px-5 mobile:px-5 tablet-sm:px-8 tablet:px-12 desktop:px-16">
 
-  
+
         <div className="flex justify-center">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-[#2466F2]/40 bg-[#2466F2]/10 px-3 py-1 text-xs font-medium text-[#2466F2]">
             Course Curriculum
@@ -79,7 +78,7 @@ export default function Curriculum() {
           desktop:flex-row desktop:items-start
         ">
 
-    
+
           <div className="flex-1 flex flex-col gap-3">
             {modules.map((mod) => {
               const isOpen = openModule === mod.id;
@@ -88,13 +87,13 @@ export default function Curriculum() {
                   key={mod.id}
                   className="rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#111] overflow-hidden"
                 >
-              
+
                   <button
                     onClick={() => toggle(mod.id)}
                     className="w-full flex items-center justify-between px-5 py-4 text-left group"
                   >
                     <div className="flex items-center gap-3">
-                 
+
                       <span className={`w-2 h-2 rounded-full shrink-0 transition-colors duration-200 ${isOpen ? "bg-[#2466F2]" : "bg-gray-400 dark:bg-gray-600"}`} />
                       <div>
                         <p className="text-sm font-semibold text-black dark:text-white leading-snug">
@@ -106,7 +105,7 @@ export default function Curriculum() {
                       </div>
                     </div>
 
-                    
+
                     <svg
                       width="18" height="18" viewBox="0 0 18 18" fill="none"
                       className={`shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : "rotate-0"}`}
@@ -117,7 +116,7 @@ export default function Curriculum() {
                     </svg>
                   </button>
 
-                
+
                   {isOpen && mod.lessons.length > 0 && (
                     <div className="border-t border-gray-100 dark:border-white/5 divide-y divide-gray-100 dark:divide-white/5">
                       {mod.lessons.map((lesson, i) => (
@@ -126,7 +125,7 @@ export default function Curriculum() {
                           className="flex items-center justify-between px-5 py-3 gap-4"
                         >
                           <div className="flex items-center gap-3 min-w-0">
-                           
+
                             <div className="shrink-0 w-7 h-7 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center bg-gray-50 dark:bg-white/5">
                               <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                                 <path d="M3 2l5 3-5 3V2z" fill="#2466F2" />

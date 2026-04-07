@@ -15,7 +15,6 @@ const Navbar = () => {
         }
     }
 
-    // Close mobile menu on resize (UX fix)
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth >= 981) {
@@ -86,7 +85,6 @@ const Navbar = () => {
                                 <path d="M21 12.79A9 9 0 1 1 11.21 3c0 .67.07 1.32.21 1.95a7 7 0 0 0 8.58 8.58c.63.14 1.28.21 1.95.21z" />
                             </svg>
                         ) : (
-                            // Sun Icon
                             <svg
                                 width="20"
                                 height="20"
@@ -103,7 +101,6 @@ const Navbar = () => {
                         )}
                     </button>
 
-                    {/* Enroll Button (Desktop only) */}
                     <button className="
             rounded-lg bg-[#2466F2] px-6 py-2.5
             text-sm font-semibold text-white
@@ -113,7 +110,6 @@ const Navbar = () => {
                         Enroll now
                     </button>
 
-                    {/* Hamburger (Mobile) */}
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="desktop:hidden p-2 hover:bg-white/10 rounded-lg"
@@ -136,7 +132,6 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* MOBILE MENU */}
             {isMenuOpen && (
                 <div className="desktop:hidden mt-4 border-t border-white/10 pt-4 space-y-3">
                     <ul>
@@ -147,7 +142,7 @@ const Navbar = () => {
                                         setIsMenuOpen(false);
                                         handleSectionClick(link);
                                     }}
-                                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
+                                    className="dark:text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium text-black"
                                 >
                                     {link}
                                 </button>

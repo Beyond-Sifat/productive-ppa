@@ -70,7 +70,6 @@ export default function Testimonials() {
     <section id="testimonial" className="w-full bg-white dark:bg-[#0A0A0A] py-16 tablet:py-20 desktop:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 mobile:px-5 tablet-sm:px-8 tablet:px-12 desktop:px-16">
 
-        {/* ── Badge ── */}
         <div className="flex justify-center">
           <Badge
             variant="outline"
@@ -81,7 +80,6 @@ export default function Testimonials() {
           </Badge>
         </div>
 
-        {/* ── Heading ── */}
         <h2 className="
           mt-5 text-center font-bold leading-tight tracking-tight
           text-[1.6rem] mobile:text-[1.6rem] tablet-sm:text-[2rem] tablet:text-[2.3rem] desktop:text-[2.6rem]
@@ -92,7 +90,6 @@ export default function Testimonials() {
           Real People
         </h2>
 
-        {/* ── Subtitle + Nav Row ── */}
         <div className="mt-10 flex items-center mobile:flex-col mobile:gap-4 tablet:flex-row tablet:justify-between">
           <p className="text-sm font-medium text-black dark:text-white">
             Join with 5K other students
@@ -123,7 +120,6 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* ── Slider Track ── */}
         <div className="mt-5 overflow-hidden">
           <div
             className="flex gap-4 transition-transform duration-500 ease-in-out"
@@ -142,7 +138,6 @@ export default function Testimonials() {
                   min-h-[280px]
                 "
               >
-                {/* ── CARD TYPE A: Full background image (video cards) ── */}
                 {t.bgImage ? (
                   <div className="relative w-full h-full min-h-[280px]">
                     <Image
@@ -185,10 +180,8 @@ export default function Testimonials() {
                   </div>
 
                 ) : (
-                  /* ── CARD TYPE B: Dark card with avatar + text + name ── */
                   <div className="bg-white dark:bg-[#111] h-full min-h-[280px] p-5 flex flex-col justify-between">
 
-                    {/* Top: small circular avatar */}
                     <div>
                       <div className="relative w-10 h-10 rounded-full overflow-hidden border border-gray-200 dark:border-white/10 shrink-0">
                         <Image
@@ -199,13 +192,11 @@ export default function Testimonials() {
                         />
                       </div>
 
-                      {/* Testimonial text */}
                       <p className="mt-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
                         {t.text}
                       </p>
                     </div>
 
-                    {/* Bottom: name + role */}
                     <div className="mt-6 pt-4 ">
                       <p className="text-sm font-semibold text-black dark:text-white">
                         {t.name}
@@ -222,7 +213,6 @@ export default function Testimonials() {
           </div>
         </div>
 
-        {/* ── Dot Indicators ── */}
         <div className="mt-6 flex items-center justify-center gap-1.5">
           {Array.from({ length: maxIndex + 1 }).map((_, i) => (
             <button
