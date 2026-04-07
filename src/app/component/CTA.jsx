@@ -20,7 +20,6 @@ export default function CTASection() {
         <section id="price" className="w-full bg-white dark:bg-[#0A0A0A] py-16 tablet:py-20 desktop:py-24">
             <div className="max-w-7xl mx-auto px-5 mobile:px-5 tablet-sm:px-8 tablet:px-12 desktop:px-16">
 
-                {/* ── Outer Card ── */}
                 <Card className="rounded-2xl overflow-hidden border border-gray-200 dark:border-white/10  bg-gray-50 dark:bg-[#111] shadow-none p-0
         ">
                     <div className="flex mobile:flex-col desktop:flex-row">
@@ -56,14 +55,11 @@ export default function CTASection() {
                                 Whatever your budget, it gets to you now.
                             </p>
 
-                            {/* Divider */}
                             <div className="mt-6 h-px w-full bg-gray-200 dark:bg-white/10" />
 
-                            {/* Feature Bullets — LEFT */}
                             <ul className="mt-6 flex flex-col gap-3">
                                 {features.map((item, i) => (
                                     <li key={i} className="flex items-start gap-3">
-                                        {/* Blue check circle */}
                                         <span className="
                       mt-0.5 shrink-0
                       w-4 h-4 rounded-full
@@ -84,18 +80,14 @@ export default function CTASection() {
 
                         </div>
 
-                        {/* ════════════════════════════════════
-                RIGHT COLUMN
-            ════════════════════════════════════ */}
+
                         <div className="
               desktop:w-[340px] desktop:shrink-0
               p-7 mobile:p-5 tablet-sm:p-6 tablet:p-8 desktop:p-10
               flex flex-col
             ">
 
-                            {/* Price Row */}
                             <div className="flex items-center gap-3 flex-wrap">
-                                {/* Current price */}
                                 <span className="
                   text-[2rem] font-bold leading-none
                   text-black dark:text-white
@@ -111,7 +103,6 @@ export default function CTASection() {
                                     $500
                                 </span>
 
-                                {/* Discount badge — green pill */}
                                 <span className="
                   inline-flex items-center
                   rounded-full px-2.5 py-0.5
@@ -123,15 +114,12 @@ export default function CTASection() {
                                 </span>
                             </div>
 
-                            {/* Offer expiry */}
                             <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
                                 30% off until 4d : 2h : 43m : 17s
                             </p>
 
-                            {/* Divider */}
                             <div className="mt-6 h-px w-full bg-gray-200 dark:bg-white/10" />
 
-                            {/* What's included bullets — RIGHT */}
                             <ul className="mt-6 flex flex-col gap-3">
                                 {includes.map((item, i) => (
                                     <li key={i} className="flex items-start gap-3">
@@ -150,10 +138,8 @@ export default function CTASection() {
                                 ))}
                             </ul>
 
-                            {/* Spacer pushes button to bottom */}
                             <div className="flex-1" />
 
-                            {/* CTA Button */}
                             <Button
                                 className="
                   mt-8 w-full rounded-lg
